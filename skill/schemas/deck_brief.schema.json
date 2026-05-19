@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SmartDecks Deck Brief",
+  "type": "object",
+  "required": ["deck_title", "objective", "audience", "output_format"],
+  "properties": {
+    "deck_title": { "type": "string" },
+    "objective": { "type": "string" },
+    "audience": { "type": "string" },
+    "occasion": { "type": "string" },
+    "output_format": {
+      "type": "string",
+      "enum": ["schema", "pptx", "html", "both", "pdf"]
+    },
+    "tone": { "type": "string" },
+    "desired_slide_count": { "type": ["integer", "null"], "minimum": 1 },
+    "template_preference": { "type": ["string", "null"] },
+    "brand_constraints": { "type": "array", "items": { "type": "string" } },
+    "must_include": { "type": "array", "items": { "type": "string" } },
+    "must_avoid": { "type": "array", "items": { "type": "string" } },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["label"],
+        "properties": {
+          "label": { "type": "string" },
+          "url_or_path": { "type": ["string", "null"] },
+          "notes": { "type": ["string", "null"] }
+        }
+      }
+    }
+  }
+}

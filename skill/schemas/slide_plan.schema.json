@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SmartDecks Slide Plan",
+  "type": "object",
+  "required": ["deck_title", "audience", "output_format", "template", "slides"],
+  "properties": {
+    "deck_title": { "type": "string" },
+    "audience": { "type": "string" },
+    "output_format": {
+      "type": "string",
+      "enum": ["schema", "pptx", "html", "both", "pdf"]
+    },
+    "template": { "type": "string" },
+    "language": { "type": "string" },
+    "slides": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["slide_number", "type", "action_title", "message", "exhibit_type"],
+        "properties": {
+          "slide_number": { "type": "integer", "minimum": 1 },
+          "type": { "type": "string" },
+          "action_title": { "type": "string" },
+          "message": { "type": "string" },
+          "exhibit_type": { "type": "string" },
+          "content_blocks": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "visual_direction": { "type": "string" },
+          "visual_role": {
+            "type": "string",
+            "enum": ["chart", "diagram", "table", "matrix", "timeline", "icon_grid", "logo_map", "hero_message", "text_summary"]
+          },
+          "chart_spec": {
+            "type": ["object", "null"],
+            "properties": {
+              "chart_type": { "type": "string" },
+              "data_status": { "type": "string", "enum": ["sourced", "calculated", "directional", "illustrative"] },
+              "highlight": { "type": ["string", "null"] },
+              "unit": { "type": ["string", "null"] }
+            }
+          },
+          "asset_spec": {
+            "type": ["object", "null"],
+            "properties": {
+              "icons": { "type": "array", "items": { "type": "string" } },
+              "logos": { "type": "array", "items": { "type": "string" } },
+              "illustration_prompt": { "type": ["string", "null"] }
+            }
+          },
+          "speaker_notes": { "type": ["string", "null"] },
+          "sources": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["label"],
+              "properties": {
+                "label": { "type": "string" },
+                "url_or_path": { "type": ["string", "null"] },
+                "date": { "type": ["string", "null"] },
+                "note": { "type": ["string", "null"] }
+              }
+            }
+          },
+          "qa_notes": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

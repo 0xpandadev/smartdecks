@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SmartDecks - AI slide skill for strategy decks</title>
+  <meta name="description" content="SmartDecks turns rough notes, research, reports, and URLs into structured, visual slide decks with numbered design templates." />
+  <style>
+    :root {
+      --ink: #101218;
+      --muted: #5f6673;
+      --line: #d7dce5;
+      --paper: #f5f7fb;
+      --white: #ffffff;
+      --blue: #2458ff;
+      --green: #0a6b55;
+      --lime: #b7ff3c;
+      --soft: #eef2f8;
+      --shadow: 0 22px 60px rgba(16, 18, 24, .14);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, "Noto Sans JP", "Noto Sans SC", "Yu Gothic", Meiryo, system-ui, sans-serif;
+    }
+    a { color: inherit; }
+    .topbar {
+      position: fixed;
+      z-index: 20;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 28px;
+      background: rgba(255, 255, 255, .88);
+      border-bottom: 1px solid rgba(215, 220, 229, .86);
+      backdrop-filter: blur(12px);
+    }
+    .brand {
+      font-weight: 920;
+      letter-spacing: 0;
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 760;
+    }
+    .nav a { text-decoration: none; }
+    .lang {
+      display: inline-flex;
+      padding: 3px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--white);
+    }
+    .lang button {
+      border: 0;
+      border-radius: 999px;
+      padding: 7px 10px;
+      color: var(--muted);
+      background: transparent;
+      font: inherit;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    .lang button.active {
+      color: var(--white);
+      background: var(--ink);
+    }
+    .hero {
+      min-height: 92vh;
+      display: grid;
+      align-items: end;
+      padding: 112px 28px 54px;
+      background:
+        linear-gradient(90deg, rgba(16, 18, 24, .84), rgba(16, 18, 24, .28) 62%, rgba(16, 18, 24, .08)),
+        url("assets/hero-preview.png") center / cover no-repeat;
+      color: var(--white);
+    }
+    .hero-inner {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 18px;
+      padding: 8px 12px;
+      border: 1px solid rgba(255, 255, 255, .44);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .12);
+      font-size: 12px;
+      font-weight: 860;
+      text-transform: uppercase;
+    }
+    h1 {
+      max-width: 850px;
+      margin: 0;
+      font-size: clamp(50px, 8vw, 112px);
+      line-height: .92;
+      letter-spacing: 0;
+    }
+    .hero-copy {
+      max-width: 720px;
+      margin: 24px 0 0;
+      color: rgba(255, 255, 255, .86);
+      font-size: clamp(18px, 2vw, 24px);
+      line-height: 1.45;
+      font-weight: 640;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border: 1px solid rgba(255, 255, 255, .56);
+      border-radius: 999px;
+      color: var(--white);
+      background: rgba(255, 255, 255, .12);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 850;
+    }
+    .button.primary {
+      color: var(--ink);
+      background: var(--lime);
+      border-color: var(--lime);
+    }
+    section {
+      padding: 74px 28px;
+    }
+    .container {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+    }
+    .section-head {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 28px;
+      align-items: end;
+      margin-bottom: 28px;
+    }
+    h2 {
+      margin: 0;
+      font-size: clamp(32px, 4vw, 58px);
+      line-height: 1;
+      letter-spacing: 0;
+    }
+    .section-copy {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.6;
+      font-weight: 620;
+    }
+    .workflow {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+    .step,
+    .template,
+    .feature {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: 0 12px 34px rgba(16, 18, 24, .08);
+    }
+    .step {
+      min-height: 180px;
+      padding: 22px;
+    }
+    .num {
+      display: inline-grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      margin-bottom: 20px;
+      border-radius: 999px;
+      color: var(--white);
+      background: var(--blue);
+      font-size: 13px;
+      font-weight: 920;
+    }
+    h3 {
+      margin: 0;
+      font-size: 21px;
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+    .step p,
+    .template p,
+    .feature p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.48;
+      font-weight: 610;
+    }
+    .templates {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+    .template {
+      overflow: hidden;
+    }
+    .template img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      object-position: top center;
+      border-bottom: 1px solid var(--line);
+      background: var(--soft);
+    }
+    .template-body {
+      padding: 18px;
+    }
+    .template h3 {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-size: 20px;
+    }
+    .template h3 span {
+      display: inline-grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      flex: 0 0 auto;
+      border-radius: 999px;
+      color: var(--white);
+      background: var(--ink);
+      font-size: 12px;
+      font-weight: 920;
+    }
+    .template a {
+      display: inline-flex;
+      margin-top: 14px;
+      color: var(--blue);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 850;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .feature {
+      padding: 22px;
+      min-height: 176px;
+    }
+    .code {
+      margin: 26px 0 0;
+      padding: 22px;
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #0f1218;
+      color: #f7f9ff;
+      font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+      font-size: 14px;
+      line-height: 1.6;
+      box-shadow: var(--shadow);
+    }
+    .note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+      font-weight: 650;
+    }
+    footer {
+      padding: 40px 28px 54px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      background: var(--white);
+      font-size: 13px;
+      font-weight: 620;
+    }
+    @media (max-width: 920px) {
+      .topbar { align-items: flex-start; gap: 14px; padding: 14px 16px; }
+      .nav { flex-wrap: wrap; justify-content: flex-end; gap: 9px; }
+      .hero { min-height: 86vh; padding: 116px 18px 42px; }
+      .section-head,
+      .workflow,
+      .features,
+      .templates { grid-template-columns: 1fr; }
+      section { padding: 54px 18px; }
+      h1 { font-size: 54px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="topbar" aria-label="Main navigation">
+    <div class="brand">SmartDecks</div>
+    <div class="nav">
+      <a href="#templates" data-i18n="navTemplates">Templates</a>
+      <a href="#skill" data-i18n="navSkill">Skill</a>
+      <a href="https://github.com/0xpandadev/smartdecks" data-i18n="navGithub">GitHub</a>
+      <div class="lang" aria-label="Language switcher">
+        <button class="active" data-set-lang="en">EN</button>
+        <button data-set-lang="ja">日本語</button>
+        <button data-set-lang="zh">中文</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow" data-i18n="eyebrow">AI skill for strategy decks and visual reports</p>
+      <h1 data-i18n="heroTitle">Turn rough information into board-ready decks.</h1>
+      <p class="hero-copy" data-i18n="heroCopy">SmartDecks is a Codex skill that converts notes, URLs, research, PDFs, and structured data into storylines, exhibit plans, HTML slides, and presentation-ready design systems.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#templates" data-i18n="heroPrimary">Explore templates</a>
+        <a class="button" href="#usage" data-i18n="heroSecondary">See usage</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="overview">
+    <div class="container">
+      <div class="section-head">
+        <h2 data-i18n="overviewTitle">From input to visible output.</h2>
+        <p class="section-copy" data-i18n="overviewCopy">The skill is designed as an orchestrator: it reads messy source material, builds the logic, selects charts and diagrams, applies a numbered visual template, and performs final layout QA.</p>
+      </div>
+      <div class="workflow">
+        <article class="step">
+          <span class="num">01</span>
+          <h3 data-i18n="step1Title">Understand</h3>
+          <p data-i18n="step1Copy">Audience, objective, source quality, constraints, and the message each slide must carry.</p>
+        </article>
+        <article class="step">
+          <span class="num">02</span>
+          <h3 data-i18n="step2Title">Structure</h3>
+          <p data-i18n="step2Copy">Executive summary, storyline, action titles, evidence, implications, and appendix logic.</p>
+        </article>
+        <article class="step">
+          <span class="num">03</span>
+          <h3 data-i18n="step3Title">Visualize</h3>
+          <p data-i18n="step3Copy">Charts, matrices, timelines, icon maps, process flows, and consulting-style explanatory diagrams.</p>
+        </article>
+        <article class="step">
+          <span class="num">04</span>
+          <h3 data-i18n="step4Title">Ship</h3>
+          <p data-i18n="step4Copy">HTML or PPTX-ready output with source footers, page numbers, responsive checks, and overflow QA.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="templates">
+    <div class="container">
+      <div class="section-head">
+        <h2 data-i18n="templatesTitle">Eight numbered design directions.</h2>
+        <p class="section-copy" data-i18n="templatesCopy">Ask for “template 4” or “テンプレ4” and SmartDecks can apply the matching visual language. The names describe the professional design concept instead of referencing the original inspiration source.</p>
+      </div>
+      <div class="templates">
+        <article class="template">
+          <img src="samples/executive-analytical-minimalism.png" alt="Executive Analytical Minimalism sample" />
+          <div class="template-body"><h3><span>1</span>Executive Analytical Minimalism</h3><p data-i18n="tpl1">White-space, chart-first, restrained executive analysis.</p><a href="samples/executive-analytical-minimalism.html" data-i18n="openSample">Open sample</a></div>
+        </article>
+        <article class="template">
+          <img src="samples/executive-analytical-minimalism-dark.png" alt="Executive Analytical Minimalism Dark sample" />
+          <div class="template-body"><h3><span>2</span>Executive Analytical Minimalism Dark</h3><p data-i18n="tpl2">Dark analytical dashboards for high-contrast board readouts.</p><a href="samples/executive-analytical-minimalism-dark.html" data-i18n="openSample">Open sample</a></div>
+        </article>
+        <article class="template">
+          <img src="samples/strategic-report-neo-corporate.png" alt="Strategic Report Neo-Corporate sample" />
+          <div class="template-body"><h3><span>3</span>Strategic Report Neo-Corporate</h3><p data-i18n="tpl3">Formal strategy-report rhythm with dense but readable evidence.</p><a href="samples/strategic-report-neo-corporate.html" data-i18n="openSample">Open sample</a></div>
+        </article>
+        <article class="template">
+          <img src="samples/vector-consulting-linework.png" alt="Vector Consulting Linework sample" />
+          <div class="template-body"><h3><span>4</span>Vector Consulting Linework</h3><p data-i18n="tpl4">Clean line art, icons, diagrams, and neon pistachio accents.</p><a href="samples/vector-consulting-linework.html" data-i18n="openSample">Open sample</a></div>
+        </article>
+        <article class="template">
+          <img src="samples/soft-modular-neo-brutalism.png" alt="Soft Modular Neo-Brutalism sample" />
+          <div class="template-body"><h3><span>5</span>Soft Modular Neo-Brutalism</h3><p data-i18n="tpl5">Rounded modules, bold labels, playful structure, and clear hierarchy.</p><a href="samples/soft-modular-neo-brutalism.html" data-i18n="openSample">Open sample</a></div>
+        </article>
+        <article class="template">
+          <img src="samples/pastel-neo-brutalism.png" alt="Pastel Neo-Brutalism sample" />
+          <div class="template-body"><h3><span>6</span>Pastel Neo-Brutalism</h3><p data-i18n="tpl6">Confident editorial blocks with softer colors and strong contrast.</p><a href="samples/pastel-neo-brutalism.html" data-i18n="openSample">Open sample</a></div>
+        </article>
+        <article class="template">
+          <img src="samples/analog-editorial-collage.png" alt="Analog Editorial Collage sample" />
+          <div class="template-body"><h3><span>7</span>Analog Editorial Collage</h3><p data-i18n="tpl7">Tactile notes, annotations, and narrative research synthesis.</p><a href="samples/analog-editorial-collage.html" data-i18n="openSample">Open sample</a></div>
+        </article>
+        <article class="template">
+          <img src="samples/botanical-editorial-classicism.png" alt="Botanical Editorial Classicism sample" />
+          <div class="template-body"><h3><span>8</span>Botanical Editorial Classicism</h3><p data-i18n="tpl8">Elegant editorial pages for reflective narratives and soft strategy.</p><a href="samples/botanical-editorial-classicism.html" data-i18n="openSample">Open sample</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="skill">
+    <div class="container">
+      <div class="section-head">
+        <h2 data-i18n="skillTitle">What the skill includes.</h2>
+        <p class="section-copy" data-i18n="skillCopy">SmartDecks is more than a renderer. It contains rules for storyline design, chart grammar, consulting diagrams, visual assets, template selection, HTML/PPTX rendering, and final QA.</p>
+      </div>
+      <div class="features">
+        <article class="feature"><h3 data-i18n="feature1Title">Storyline engine</h3><p data-i18n="feature1Copy">Turns source material into executive summaries, issue trees, recommendations, and next actions.</p></article>
+        <article class="feature"><h3 data-i18n="feature2Title">Exhibit selector</h3><p data-i18n="feature2Copy">Chooses charts, matrices, roadmaps, scorecards, process diagrams, and icon maps based on the content.</p></article>
+        <article class="feature"><h3 data-i18n="feature3Title">Visual QA</h3><p data-i18n="feature3Copy">Checks overflow, object overlap, weak titles, missing sources, excessive text, contrast, and template consistency.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="usage">
+    <div class="container">
+      <div class="section-head">
+        <h2 data-i18n="usageTitle">Use it by number.</h2>
+        <p class="section-copy" data-i18n="usageCopy">You do not need to memorize template names. Ask for the template list, then refer to a number in your next request.</p>
+      </div>
+      <pre class="code"><code data-i18n="usageCode">[$smart-decks] Show template list.
+
+[$smart-decks] Use template 4.
+Turn this research note into a 12-slide HTML strategy deck.
+Use charts where possible, add icons and source footers, then QA for overflow.</code></pre>
+      <p class="note" data-i18n="affiliation">SmartDecks is an independent project. It is not affiliated with McKinsey, BCG, Anthropic, or OpenAI. Public strategy reports were used only as design-quality references.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" data-i18n="footer">SmartDecks: a local Codex skill for structured, visual, presentation-ready decks.</div>
+  </footer>
+
+  <script>
+    const copy = {
+      en: {
+        navTemplates: "Templates", navSkill: "Skill", navGithub: "GitHub",
+        eyebrow: "AI skill for strategy decks and visual reports",
+        heroTitle: "Turn rough information into board-ready decks.",
+        heroCopy: "SmartDecks is a Codex skill that converts notes, URLs, research, PDFs, and structured data into storylines, exhibit plans, HTML slides, and presentation-ready design systems.",
+        heroPrimary: "Explore templates", heroSecondary: "See usage",
+        overviewTitle: "From input to visible output.",
+        overviewCopy: "The skill is designed as an orchestrator: it reads messy source material, builds the logic, selects charts and diagrams, applies a numbered visual template, and performs final layout QA.",
+        step1Title: "Understand", step1Copy: "Audience, objective, source quality, constraints, and the message each slide must carry.",
+        step2Title: "Structure", step2Copy: "Executive summary, storyline, action titles, evidence, implications, and appendix logic.",
+        step3Title: "Visualize", step3Copy: "Charts, matrices, timelines, icon maps, process flows, and consulting-style explanatory diagrams.",
+        step4Title: "Ship", step4Copy: "HTML or PPTX-ready output with source footers, page numbers, responsive checks, and overflow QA.",
+        templatesTitle: "Eight numbered design directions.",
+        templatesCopy: "Ask for “template 4” or “テンプレ4” and SmartDecks can apply the matching visual language. The names describe the professional design concept instead of referencing the original inspiration source.",
+        openSample: "Open sample",
+        tpl1: "White-space, chart-first, restrained executive analysis.",
+        tpl2: "Dark analytical dashboards for high-contrast board readouts.",
+        tpl3: "Formal strategy-report rhythm with dense but readable evidence.",
+        tpl4: "Clean line art, icons, diagrams, and neon pistachio accents.",
+        tpl5: "Rounded modules, bold labels, playful structure, and clear hierarchy.",
+        tpl6: "Confident editorial blocks with softer colors and strong contrast.",
+        tpl7: "Tactile notes, annotations, and narrative research synthesis.",
+        tpl8: "Elegant editorial pages for reflective narratives and soft strategy.",
+        skillTitle: "What the skill includes.",
+        skillCopy: "SmartDecks is more than a renderer. It contains rules for storyline design, chart grammar, consulting diagrams, visual assets, template selection, HTML/PPTX rendering, and final QA.",
+        feature1Title: "Storyline engine", feature1Copy: "Turns source material into executive summaries, issue trees, recommendations, and next actions.",
+        feature2Title: "Exhibit selector", feature2Copy: "Chooses charts, matrices, roadmaps, scorecards, process diagrams, and icon maps based on the content.",
+        feature3Title: "Visual QA", feature3Copy: "Checks overflow, object overlap, weak titles, missing sources, excessive text, contrast, and template consistency.",
+        usageTitle: "Use it by number.",
+        usageCopy: "You do not need to memorize template names. Ask for the template list, then refer to a number in your next request.",
+        usageCode: "[$smart-decks] Show template list.\n\n[$smart-decks] Use template 4.\nTurn this research note into a 12-slide HTML strategy deck.\nUse charts where possible, add icons and source footers, then QA for overflow.",
+        affiliation: "SmartDecks is an independent project. It is not affiliated with McKinsey, BCG, Anthropic, or OpenAI. Public strategy reports were used only as design-quality references.",
+        footer: "SmartDecks: a local Codex skill for structured, visual, presentation-ready decks."
+      },
+      ja: {
+        navTemplates: "テンプレート", navSkill: "スキル", navGithub: "GitHub",
+        eyebrow: "戦略資料・ビジュアルレポート向けAIスキル",
+        heroTitle: "粗い情報を、そのまま見せられる資料へ。",
+        heroCopy: "SmartDecksは、メモ、URL、調査結果、PDF、構造化データを読み取り、ストーリーライン、図解設計、HTMLスライド、プレゼン向けデザインまで整えるCodexスキルです。",
+        heroPrimary: "テンプレートを見る", heroSecondary: "使い方を見る",
+        overviewTitle: "入力したら、結果を見せる。",
+        overviewCopy: "SmartDecksは司令塔スキルです。雑多な素材を読み、構成を作り、チャートや図解を選び、番号付きテンプレートを適用し、最後にレイアウトQAまで行います。",
+        step1Title: "理解する", step1Copy: "読み手、目的、素材の質、制約、各スライドで伝えるべきメッセージを整理します。",
+        step2Title: "構成する", step2Copy: "Executive summary、ストーリーライン、Action title、根拠、示唆、Appendixを設計します。",
+        step3Title: "図解する", step3Copy: "チャート、マトリクス、ロードマップ、アイコンマップ、プロセス図、コンサル風の説明図を使います。",
+        step4Title: "出力する", step4Copy: "HTMLまたはPPTX向けに、出典、ページ番号、レスポンシブ確認、文字溢れQAまで含めて仕上げます。",
+        templatesTitle: "番号で選べる8つのデザイン方向。",
+        templatesCopy: "「template 4」や「テンプレ4」と指定すれば、その視覚言語で作れます。名前は元ネタではなく、プロのデザイン概念として整理しています。",
+        openSample: "サンプルを開く",
+        tpl1: "余白、チャート中心、抑制された経営向け分析。",
+        tpl2: "高コントラストのダーク分析ダッシュボード。",
+        tpl3: "戦略レポートらしい硬質で読みやすい情報密度。",
+        tpl4: "線画、アイコン、図解、ネオンピスタチオのアクセント。",
+        tpl5: "丸みのあるモジュール、太いラベル、明快な階層。",
+        tpl6: "強い編集ブロックと柔らかい色のネオブルータリズム。",
+        tpl7: "手触りのあるメモ、注釈、定性調査の統合。",
+        tpl8: "余韻のある物語や柔らかい戦略に合う上品な編集調。",
+        skillTitle: "スキルに含まれるもの。",
+        skillCopy: "SmartDecksは単なるレンダラーではありません。構成、チャート文法、図解、ビジュアル素材、テンプレ選択、HTML/PPTX出力、最終QAのルールを含みます。",
+        feature1Title: "構成エンジン", feature1Copy: "素材をExecutive summary、Issue tree、推奨案、Next actionsへ変換します。",
+        feature2Title: "図表セレクター", feature2Copy: "内容に応じてチャート、マトリクス、ロードマップ、スコアカード、プロセス図、アイコンマップを選びます。",
+        feature3Title: "見た目QA", feature3Copy: "文字溢れ、重なり、弱いタイトル、出典漏れ、文字量過多、コントラスト、テンプレ一貫性を確認します。",
+        usageTitle: "番号で使う。",
+        usageCopy: "テンプレ名を覚える必要はありません。まずテンプレ一覧を出し、次の依頼で番号を指定します。",
+        usageCode: "[$smart-decks] テンプレ一覧を出して。\n\n[$smart-decks] テンプレ4で。\nこの調査メモを12枚のHTML戦略資料にして。\n必要なところはチャート化し、アイコンと出典を入れて、最後に文字溢れをQAして。",
+        affiliation: "SmartDecksは独立プロジェクトです。McKinsey、BCG、Anthropic、OpenAIとは提携していません。公開されている戦略レポートは品質参考としてのみ扱っています。",
+        footer: "SmartDecks: 構造化され、視覚的で、すぐ使える資料を作るローカルCodexスキル。"
+      },
+      zh: {
+        navTemplates: "模板", navSkill: "技能", navGithub: "GitHub",
+        eyebrow: "用于战略简报与视觉报告的 AI 技能",
+        heroTitle: "把粗糙信息变成可展示的专业演示。",
+        heroCopy: "SmartDecks 是一个 Codex 技能，可以把笔记、URL、研究材料、PDF 和结构化数据转成故事线、图表规划、HTML 幻灯片和可复用的视觉设计体系。",
+        heroPrimary: "查看模板", heroSecondary: "查看用法",
+        overviewTitle: "从输入到可见成果。",
+        overviewCopy: "它像一个编排器：读取混杂资料，建立逻辑结构，选择图表和说明图，套用编号视觉模板，并在最后进行版面 QA。",
+        step1Title: "理解", step1Copy: "识别受众、目标、资料质量、限制条件，以及每页幻灯片要传达的信息。",
+        step2Title: "结构化", step2Copy: "设计摘要、故事线、行动标题、证据、洞察和附录逻辑。",
+        step3Title: "可视化", step3Copy: "使用图表、矩阵、时间线、图标地图、流程图和咨询式解释图。",
+        step4Title: "交付", step4Copy: "输出 HTML 或 PPTX-ready 内容，并包含来源、页码、响应式检查和溢出 QA。",
+        templatesTitle: "8 个可编号选择的设计方向。",
+        templatesCopy: "只要说 “template 4” 或 “模板4”，SmartDecks 就能使用对应的视觉语言。名称使用专业设计概念，而不是引用原始灵感来源。",
+        openSample: "打开样例",
+        tpl1: "留白充足、图表优先、克制的高管分析风格。",
+        tpl2: "适合董事会汇报的高对比深色分析界面。",
+        tpl3: "正式战略报告节奏，信息密度高但可读。",
+        tpl4: "干净线稿、图标、说明图与荧光开心果绿点缀。",
+        tpl5: "圆角模块、粗标签、轻松但层级清晰。",
+        tpl6: "柔和配色与强编辑感区块结合的 Neo-Brutalism。",
+        tpl7: "纸张质感、批注和定性研究叙事综合。",
+        tpl8: "适合反思型叙事和柔性战略的优雅编辑风格。",
+        skillTitle: "技能包含什么。",
+        skillCopy: "SmartDecks 不只是渲染器。它包含故事线、图表语法、咨询图解、视觉资产、模板选择、HTML/PPTX 输出和最终 QA 的规则。",
+        feature1Title: "故事线引擎", feature1Copy: "把资料转成高管摘要、问题树、建议方案和下一步行动。",
+        feature2Title: "图表选择器", feature2Copy: "根据内容选择图表、矩阵、路线图、评分卡、流程图和图标地图。",
+        feature3Title: "视觉 QA", feature3Copy: "检查文字溢出、对象重叠、标题弱、来源缺失、文字过多、对比度和模板一致性。",
+        usageTitle: "用编号调用。",
+        usageCopy: "不需要记住模板名称。先让技能列出模板，再在下一条指令里引用编号。",
+        usageCode: "[$smart-decks] 显示模板列表。\n\n[$smart-decks] 使用模板4。\n把这份研究笔记做成 12 页 HTML 战略简报。\n能图表化的地方请图表化，加入图标和来源页脚，最后检查文字溢出。",
+        affiliation: "SmartDecks 是独立项目，与 McKinsey、BCG、Anthropic 或 OpenAI 无关联。公开战略报告仅作为设计质量参考。",
+        footer: "SmartDecks：一个本地 Codex 技能，用来制作结构清晰、视觉化、可直接展示的演示文稿。"
+      }
+    };
+
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll("[data-i18n]").forEach((node) => {
+        const key = node.dataset.i18n;
+        if (copy[lang][key]) node.textContent = copy[lang][key];
+      });
+      document.querySelectorAll("[data-set-lang]").forEach((button) => {
+        button.classList.toggle("active", button.dataset.setLang === lang);
+      });
+      localStorage.setItem("smartdecks-lang", lang);
+    }
+
+    document.querySelectorAll("[data-set-lang]").forEach((button) => {
+      button.addEventListener("click", () => setLang(button.dataset.setLang));
+    });
+    setLang(localStorage.getItem("smartdecks-lang") || "en");
+  </script>
+</body>
+</html>

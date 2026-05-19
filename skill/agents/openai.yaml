@@ -1,0 +1,8 @@
+interface:
+  display_name: "SmartDecks"
+  short_description: "Plan and render professional PPTX/HTML decks"
+  brand_color: "#B7FF4A"
+  default_prompt: "Use $smart-decks to turn these notes into a polished executive deck with action titles, exhibits, and final QA."
+
+policy:
+  allow_implicit_invocation: true
