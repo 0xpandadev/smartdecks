@@ -72,6 +72,8 @@ Alias: Grove.
 Visual traits:
 - Forest green, cream type, classical editorial serif rhythm
 - Warm, reflective, literary, grown-up
+- Despite the name, do not use literal plant, flower, leaf, vine, botanical, or ornamental illustrations as decoration.
+- Use the style as a color/typography/editorial system only. If a nature motif is content-relevant, convert it into a labeled ecosystem map, stakeholder map, or causal diagram.
 
 Use for:
 - Sustainability
@@ -79,6 +81,10 @@ Use for:
 - Culture
 - Long-term vision
 - Calm research narratives
+
+Avoid:
+- Decorative flowers, leaves, vines, corner ornaments, or unrelated nature line art.
+- Unlabeled circles, badges, or illustrations that do not explain the slide message.
 
 ## Consulting / Executive Design Systems
 

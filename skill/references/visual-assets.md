@@ -2,6 +2,15 @@
 
 Use icons and logos when they reduce cognitive load or identify real entities. Do not sprinkle icons as decoration.
 
+## Semantic Asset Gate
+
+Before adding any illustration, icon, logo, ornament, or image, verify it passes at least one test:
+- It labels a real entity, role, tool, risk, capability, or decision point.
+- It shows structure, flow, hierarchy, causality, comparison, or data.
+- It helps the reader understand the action title faster.
+
+If it does not pass, remove it. Never add flowers, leaves, vines, abstract corner art, mascot-like drawings, or filler line art merely to decorate whitespace. This applies even to templates with editorial or botanical names.
+
 ## Icon Rules
 
 Use icons for:
@@ -56,5 +65,6 @@ Use:
 Avoid:
 - Generic card grids on every slide
 - Decorative emoji
+- Decorative flowers, leaves, vines, ornaments, or abstract line art unrelated to the slide content
 - Overly cute illustrations for executive decks
 - Unexplained icons

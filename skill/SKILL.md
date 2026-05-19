@@ -32,6 +32,7 @@ For high-stakes, ambiguous, or long decks, show a compact storyline or slide pla
 - One slide, one message.
 - Use action titles, not topic labels.
 - Prefer charts, diagrams, tables, icons, logos, and structured exhibits over generic cards.
+- Never add decorative illustrations, flowers, leaves, ornaments, abstract line art, or filler icons just to make a slide look designed. Every visual asset must explain content, label structure, identify an entity, show flow, or encode data.
 - Do not default to boxes/cards for every slide. Each slide must choose a visual role: chart, data table, process, matrix, system map, timeline, icon grid, hero message, or appendix.
 - Include source footers on data or externally sourced slides.
 - Keep a consistent visual system across the deck.

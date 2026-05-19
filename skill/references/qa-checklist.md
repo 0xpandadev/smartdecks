@@ -34,6 +34,7 @@ Run before final delivery.
 - No accidental template mixing
 - Deck does not overuse generic cards/boxes
 - Charts, diagrams, icons, logos, and tables are used where they clarify the message
+- No decorative-only visuals: remove flowers, leaves, vines, ornaments, abstract corner art, filler icons, or illustrations that do not explain content or structure
 
 ## Data and Source QA
 

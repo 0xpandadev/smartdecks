@@ -33,6 +33,7 @@ When using `zarazhangrui/beautiful-html-templates`:
 - Use real or generated visual assets where the deck needs imagery.
 - Use SVG/HTML/CSS diagrams for crisp line art when practical.
 - Use CSS/SVG charts, icon rows, logo tiles, matrices, and process diagrams; do not rely only on cards.
+- Do not add decorative SVGs or images. Every CSS/SVG illustration must be a labeled chart, diagram, icon map, logo map, process, or content-relevant visual explanation.
 - Use browser screenshots for QA.
 - Ensure every slide fits in a 16:9 frame without vertical scroll or clipped text.
 
