@@ -21,12 +21,16 @@ Give a short list:
 | --- | --- | --- | --- |
 | 1 | Executive Analytical Minimalism | Executive analysis, charts, strategy | white space, thin rules, restrained accents |
 | 2 | Executive Analytical Minimalism Dark | Covers, section breaks, big conclusions | deep navy, high contrast, signal slides |
-| 3 | Strategic Report Neo-Corporate | Transformation, policy, AI strategy | green accent, dense executive structure |
-| 4 | Vector Consulting Linework | Workflows, operating models, AI diagrams | thin line icons, arrows, pistachio accent |
-| 5 | Soft Modular Neo-Brutalism | AI/product/web-native explainers | rounded modules, pastel pop, bold borders |
-| 6 | Pastel Neo-Brutalism | Startup/product/business pitch | chunky borders, energetic blocks |
-| 7 | Analog Editorial Collage | Essays, qualitative research, workshops | paper, annotations, editorial tactility |
-| 8 | Botanical Editorial Classicism | Calm research, education, culture | forest/cream, editorial classicism |
+| 3 | Corporate Linework Profile | Company profile, recruiting, culture, office/history decks | monochrome, red accent, isometric linework |
+| 4 | Gradient Editorial Proposal | Project proposals, creative strategy, team/story decks | thin grid, soft gradients, bold lowercase type |
+| 5 | Financial Blueprint Analytics | Finance, investment, forecasts, fundraising plans | blue accent, donut charts, tables, dashboards |
+| 6 | Monochrome Pitch System | Startup pitch, product/service/business model decks | black/white, bold icons, compact pitch layouts |
+| 7 | Strategic Report Neo-Corporate | Transformation, policy, AI strategy | green accent, dense executive structure |
+| 8 | Vector Consulting Linework | Workflows, operating models, AI diagrams | thin line icons, arrows, pistachio accent |
+| 9 | Soft Modular Neo-Brutalism | AI/product/web-native explainers | rounded modules, pastel pop, bold borders |
+| 10 | Pastel Neo-Brutalism | Startup/product/business pitch | chunky borders, energetic blocks |
+| 11 | Analog Editorial Collage | Essays, qualitative research, workshops | paper, annotations, editorial tactility |
+| 12 | Botanical Editorial Classicism | Calm research, education, culture | forest/cream, editorial classicism |
 
 Then ask the user to choose one, or offer to choose based on the material.
 

@@ -1,81 +1,52 @@
 <!doctype html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vector Consulting Linework Sample</title>
   <style>
-    :root { --ink:#111318; --muted:#62666f; --green:#b9ff4a; --mint:#eaffd1; --paper:#ffffff; }
-    * { box-sizing:border-box; }
-    body { margin:0; background:#f4f6f1; color:var(--ink); font-family:Inter, "Noto Sans JP", Meiryo, system-ui, sans-serif; }
-    .wrap { width:min(1200px, calc(100% - 32px)); margin:0 auto; padding:28px 0 44px; }
-    .label { margin:0 0 18px; font-size:14px; font-weight:900; color:var(--muted); text-transform:uppercase; }
-    .slide { position:relative; aspect-ratio:16/9; margin:0 0 26px; padding:42px 54px 36px; background:var(--paper); border:1.5px solid #d9ddd6; overflow:hidden; }
-    .slide::before { content:""; position:absolute; left:54px; right:54px; top:94px; height:1px; background:#d8ded2; }
-    h1,h2,p{margin:0} h1{font-size:54px;line-height:1.04;letter-spacing:0;max-width:780px} h2{font-size:34px;line-height:1.18;max-width:960px}
-    .sub{margin-top:20px;color:var(--muted);font-size:20px;font-weight:650;max-width:720px}.k{display:inline-flex;margin-bottom:22px;padding:7px 14px;border:1.8px solid var(--ink);border-radius:999px;background:var(--green);font-size:12px;font-weight:950}
-    .footer{position:absolute;left:54px;right:54px;bottom:24px;display:flex;justify-content:space-between;color:#777;font-size:11px;font-weight:700}
-    svg{width:100%;height:100%;overflow:visible}.diagram{position:absolute;left:80px;right:80px;top:155px;bottom:82px}.line{stroke:var(--ink);stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}.thin{stroke:#9ba399;stroke-width:1.5}.fill{fill:var(--mint);stroke:var(--ink);stroke-width:2.5}.hi{fill:var(--green);stroke:var(--ink);stroke-width:2.5}.txt{font-size:15px;font-weight:800;fill:var(--ink)}.small{font-size:12px;font-weight:700;fill:var(--muted)}.callout{position:absolute;right:54px;bottom:74px;width:340px;padding:18px 20px;border:2px solid var(--ink);background:var(--mint);font-size:18px;font-weight:850;line-height:1.35}.num{font-size:16px;font-weight:950;fill:var(--ink)}
+    :root{--ink:#111318;--muted:#62666f;--green:#b9ff4a;--mint:#eaffd1;--paper:#ffffff}
+    *{box-sizing:border-box}body{margin:0;background:#f4f6f1;color:var(--ink);font-family:Inter,Arial,sans-serif}.wrap{width:min(1200px,calc(100% - 32px));margin:0 auto;padding:28px 0 44px}.label{margin:0 0 18px;font-size:14px;font-weight:900;color:var(--muted);text-transform:uppercase}.slide{position:relative;aspect-ratio:16/9;margin:0 0 26px;padding:42px 54px 36px;background:var(--paper);border:1.5px solid #d9ddd6;overflow:hidden}.slide:before{content:"";position:absolute;left:54px;right:54px;top:94px;height:1px;background:#d8ded2}h1,h2,p{margin:0}h1{font-size:54px;line-height:1.04;letter-spacing:0;max-width:780px}h2{font-size:34px;line-height:1.18;max-width:960px}.sub{margin-top:20px;color:var(--muted);font-size:20px;font-weight:650;max-width:720px}.k{display:inline-flex;margin-bottom:22px;padding:7px 14px;border:1.8px solid var(--ink);border-radius:999px;background:var(--green);font-size:12px;font-weight:950}.footer{position:absolute;left:54px;right:54px;bottom:24px;display:flex;justify-content:space-between;color:#777;font-size:11px;font-weight:700}svg{width:100%;height:100%;overflow:visible}.diagram{position:absolute;left:80px;right:80px;top:155px;bottom:82px}.line{stroke:var(--ink);stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}.fill{fill:var(--mint);stroke:var(--ink);stroke-width:2.5}.hi{fill:var(--green);stroke:var(--ink);stroke-width:2.5}.txt{font-size:15px;font-weight:800;fill:var(--ink)}.small{font-size:12px;font-weight:700;fill:var(--muted)}.callout{position:absolute;right:54px;bottom:74px;width:340px;padding:18px 20px;border:2px solid var(--ink);background:var(--mint);font-size:18px;font-weight:850;line-height:1.35}.num{font-size:16px;font-weight:950;fill:var(--ink)}
   </style>
 </head>
-<body>
-  <main class="wrap">
-    <p class="label">Vector Consulting Linework / thin-line executive diagrams</p>
-    <section class="slide">
-      <span class="k">Operating model</span>
-      <h1>AIはツールではなく、業務を接続するレイヤーになる</h1>
-      <p class="sub">白背景、細線、ピスタチオの一点強調。人・AI・業務システムの関係を、装飾ではなく構造として見せる。</p>
-      <div class="footer"><span>SmartDecks design sample</span><span>01</span></div>
-    </section>
-
-    <section class="slide">
-      <span class="k">System diagram</span>
-      <h2>AI Work OSは、人間の判断を中心にタスク実行を外側へ展開する</h2>
-      <div class="diagram">
-        <svg viewBox="0 0 1040 420" aria-label="AI Work OS diagram">
-          <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L9,3 L0,6 Z" fill="#111318"/></marker></defs>
-          <rect class="fill" x="410" y="132" width="220" height="120" rx="26"/>
-          <text class="txt" x="520" y="182" text-anchor="middle">Human judgment</text>
-          <text class="small" x="520" y="211" text-anchor="middle">問い・責任・承認</text>
-          <rect class="line" x="80" y="56" width="190" height="84" rx="22"/>
-          <rect class="line" x="80" y="276" width="190" height="84" rx="22"/>
-          <rect class="line" x="770" y="56" width="190" height="84" rx="22"/>
-          <rect class="line" x="770" y="276" width="190" height="84" rx="22"/>
-          <text class="txt" x="175" y="92" text-anchor="middle">Data</text><text class="small" x="175" y="118" text-anchor="middle">社内知識・ログ</text>
-          <text class="txt" x="175" y="312" text-anchor="middle">Tools</text><text class="small" x="175" y="338" text-anchor="middle">SaaS・RPA・API</text>
-          <text class="txt" x="865" y="92" text-anchor="middle">Agents</text><text class="small" x="865" y="118" text-anchor="middle">調査・要約・実行</text>
-          <text class="txt" x="865" y="312" text-anchor="middle">Outputs</text><text class="small" x="865" y="338" text-anchor="middle">資料・判断材料</text>
-          <path class="line" marker-end="url(#arrow)" d="M270 98 C340 96 352 154 410 166"/>
-          <path class="line" marker-end="url(#arrow)" d="M270 318 C340 318 350 238 410 218"/>
-          <path class="line" marker-end="url(#arrow)" d="M630 168 C692 150 706 98 770 98"/>
-          <path class="line" marker-end="url(#arrow)" d="M630 218 C700 236 708 318 770 318"/>
-          <circle class="hi" cx="520" cy="64" r="28"/><text class="num" x="520" y="70" text-anchor="middle">1</text>
-          <path class="line" marker-end="url(#arrow)" d="M520 92 L520 132"/>
-          <text class="small" x="600" y="68">人が問いを定義</text>
-        </svg>
-      </div>
-      <div class="footer"><span>Diagram style: linework + labeled system map</span><span>02</span></div>
-    </section>
-
-    <section class="slide">
-      <span class="k">Process diagram</span>
-      <h2>AI Skill Factoryは、業務需要をスキル化し、利用ログで改善する循環である</h2>
-      <div class="diagram">
-        <svg viewBox="0 0 1040 420" aria-label="AI skill factory loop">
-          <defs><marker id="arrow2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L9,3 L0,6 Z" fill="#111318"/></marker></defs>
-          <rect class="line" x="64" y="140" width="150" height="92" rx="24"/><text class="txt" x="139" y="178" text-anchor="middle">Demand</text><text class="small" x="139" y="204" text-anchor="middle">業務課題</text>
-          <rect class="hi" x="266" y="140" width="150" height="92" rx="24"/><text class="txt" x="341" y="178" text-anchor="middle">Design</text><text class="small" x="341" y="204" text-anchor="middle">仕事の型</text>
-          <rect class="line" x="468" y="140" width="150" height="92" rx="24"/><text class="txt" x="543" y="178" text-anchor="middle">Package</text><text class="small" x="543" y="204" text-anchor="middle">Skill / Agent</text>
-          <rect class="line" x="670" y="140" width="150" height="92" rx="24"/><text class="txt" x="745" y="178" text-anchor="middle">Deploy</text><text class="small" x="745" y="204" text-anchor="middle">業務へ投入</text>
-          <rect class="line" x="872" y="140" width="150" height="92" rx="24"/><text class="txt" x="947" y="178" text-anchor="middle">Learn</text><text class="small" x="947" y="204" text-anchor="middle">ログ改善</text>
-          <path class="line" marker-end="url(#arrow2)" d="M214 186 H266"/><path class="line" marker-end="url(#arrow2)" d="M416 186 H468"/><path class="line" marker-end="url(#arrow2)" d="M618 186 H670"/><path class="line" marker-end="url(#arrow2)" d="M820 186 H872"/>
-          <path class="line" marker-end="url(#arrow2)" d="M946 250 C900 350 222 354 142 250"/>
-          <text class="small" x="520" y="342" text-anchor="middle">usage data feeds the next version</text>
-        </svg>
-      </div>
-      <div class="callout">図解の主役は人物ではなく、仕事が再利用可能な型へ変換される流れ。</div>
-      <div class="footer"><span>Vector Consulting Linework sample</span><span>03</span></div>
-    </section>
-  </main>
-</body>
-</html>
+<body><main class="wrap">
+  <p class="label">8. Vector Consulting Linework / thin-line executive diagrams</p>
+  <section class="slide">
+    <span class="k">Operating model</span>
+    <h1>AI becomes valuable when it connects people, data, tools, and decisions</h1>
+    <p class="sub">Use this style for crisp consulting diagrams: thin black outlines, limited color, semantic icons, arrows, and a pistachio accent.</p>
+    <div class="footer"><span>SmartDecks design sample</span><span>01</span></div>
+  </section>
+  <section class="slide">
+    <span class="k">System diagram</span>
+    <h2>An AI work OS externalizes task execution while keeping human judgment at the center</h2>
+    <div class="diagram">
+      <svg viewBox="0 0 1040 420" aria-label="AI Work OS diagram">
+        <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L9,3 L0,6 Z" fill="#111318"/></marker></defs>
+        <rect class="fill" x="410" y="132" width="220" height="120" rx="26"/><text class="txt" x="520" y="182" text-anchor="middle">Human judgment</text><text class="small" x="520" y="211" text-anchor="middle">questions / risk / approval</text>
+        <rect class="line" x="80" y="56" width="190" height="84" rx="22"/><rect class="line" x="80" y="276" width="190" height="84" rx="22"/><rect class="line" x="770" y="56" width="190" height="84" rx="22"/><rect class="line" x="770" y="276" width="190" height="84" rx="22"/>
+        <text class="txt" x="175" y="92" text-anchor="middle">Data</text><text class="small" x="175" y="118" text-anchor="middle">files / APIs / logs</text><text class="txt" x="175" y="312" text-anchor="middle">Tools</text><text class="small" x="175" y="338" text-anchor="middle">SaaS / scripts / workflows</text><text class="txt" x="865" y="92" text-anchor="middle">Agents</text><text class="small" x="865" y="118" text-anchor="middle">research / classify / draft</text><text class="txt" x="865" y="312" text-anchor="middle">Outputs</text><text class="small" x="865" y="338" text-anchor="middle">reports / decisions</text>
+        <path class="line" marker-end="url(#arrow)" d="M270 98 C340 96 352 154 410 166"/><path class="line" marker-end="url(#arrow)" d="M270 318 C340 318 350 238 410 218"/><path class="line" marker-end="url(#arrow)" d="M630 168 C692 150 706 98 770 98"/><path class="line" marker-end="url(#arrow)" d="M630 218 C700 236 708 318 770 318"/>
+        <circle class="hi" cx="520" cy="64" r="28"/><text class="num" x="520" y="70" text-anchor="middle">1</text><path class="line" marker-end="url(#arrow)" d="M520 92 L520 132"/><text class="small" x="600" y="68">human defines the question</text>
+      </svg>
+    </div>
+    <div class="footer"><span>Diagram style: linework + labeled system map</span><span>02</span></div>
+  </section>
+  <section class="slide">
+    <span class="k">Process diagram</span>
+    <h2>An AI skill factory turns recurring work into reusable capabilities, then improves them with usage data</h2>
+    <div class="diagram">
+      <svg viewBox="0 0 1040 420" aria-label="AI skill factory loop">
+        <defs><marker id="arrow2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L9,3 L0,6 Z" fill="#111318"/></marker></defs>
+        <rect class="line" x="64" y="140" width="150" height="92" rx="24"/><text class="txt" x="139" y="178" text-anchor="middle">Demand</text><text class="small" x="139" y="204" text-anchor="middle">work request</text>
+        <rect class="hi" x="266" y="140" width="150" height="92" rx="24"/><text class="txt" x="341" y="178" text-anchor="middle">Design</text><text class="small" x="341" y="204" text-anchor="middle">task pattern</text>
+        <rect class="line" x="468" y="140" width="150" height="92" rx="24"/><text class="txt" x="543" y="178" text-anchor="middle">Package</text><text class="small" x="543" y="204" text-anchor="middle">skill / agent</text>
+        <rect class="line" x="670" y="140" width="150" height="92" rx="24"/><text class="txt" x="745" y="178" text-anchor="middle">Deploy</text><text class="small" x="745" y="204" text-anchor="middle">team workflow</text>
+        <rect class="line" x="872" y="140" width="150" height="92" rx="24"/><text class="txt" x="947" y="178" text-anchor="middle">Learn</text><text class="small" x="947" y="204" text-anchor="middle">quality logs</text>
+        <path class="line" marker-end="url(#arrow2)" d="M214 186 H266"/><path class="line" marker-end="url(#arrow2)" d="M416 186 H468"/><path class="line" marker-end="url(#arrow2)" d="M618 186 H670"/><path class="line" marker-end="url(#arrow2)" d="M820 186 H872"/><path class="line" marker-end="url(#arrow2)" d="M946 250 C900 350 222 354 142 250"/><text class="small" x="520" y="342" text-anchor="middle">usage data feeds the next version</text>
+      </svg>
+    </div>
+    <div class="callout">The visual should explain the operating logic, not decorate the page.</div>
+    <div class="footer"><span>Vector Consulting Linework sample</span><span>03</span></div>
+  </section>
+</main></body></html>

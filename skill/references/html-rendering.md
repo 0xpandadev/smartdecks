@@ -9,6 +9,10 @@ If the user names a template, use it.
 If not:
 - Business/executive default: `Executive Analytical Minimalism`
 - Strong title/section moments: `Executive Analytical Minimalism Dark`
+- Company profile / recruiting / culture / office history: `Corporate Linework Profile`
+- Project proposal / creative strategy / team narrative: `Gradient Editorial Proposal`
+- Finance / investment / forecast / use-of-funds: `Financial Blueprint Analytics`
+- Startup pitch / product / service / traction: `Monochrome Pitch System`
 - Transformation/policy/AI report: `Strategic Report Neo-Corporate`
 - AI/workflow diagram: `Vector Consulting Linework`
 - Product/storytelling: `Analog Editorial Collage`
@@ -19,7 +23,7 @@ If not:
 ## Beautiful HTML Templates
 
 When using `zarazhangrui/beautiful-html-templates`:
-- Use only the internal aliases behind Analog Editorial Collage, Pastel Neo-Brutalism, Soft Modular Neo-Brutalism, or Botanical Editorial Classicism by default.
+- Use only the internal aliases behind Analog Editorial Collage, Pastel Neo-Brutalism, Soft Modular Neo-Brutalism, or Botanical Editorial Classicism when the user asks for those imported visual directions.
 - Read the template's structure before editing.
 - Keep its design system intact.
 - Replace content and imagery to match the user's brief.

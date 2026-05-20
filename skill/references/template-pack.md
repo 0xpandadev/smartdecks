@@ -126,6 +126,98 @@ Use for:
 - Big message
 - Final recommendation
 
+### Corporate Linework Profile
+
+Reference analysis: monochrome company-introduction decks with bold logo/title pages, sparse copy, red accent marks, simple isometric city/office linework, timeline/company-history pages, agenda pages, employee charts, and compact company-data tables.
+
+Visual traits:
+- White or pale gray textured background
+- Heavy black typography for section markers and agenda numbers
+- Thin black rules, table grids, and timeline arrows
+- One small red accent per slide for emphasis, never as decoration
+- Isometric line icons only when they represent office, people, product, location, timeline, or business domain
+
+Use for:
+- Company profile
+- Recruiting/culture decks
+- Office/location/history decks
+- Corporate onboarding
+- Founder or business overview
+
+Avoid:
+- Colorful decorative illustrations
+- Generic city drawings unrelated to company footprint or operations
+- Dense prose; this style needs short copy and clear sections
+
+### Gradient Editorial Proposal
+
+Reference analysis: modern proposal systems with strict rule grids, asymmetrical layouts, soft blurred gradients, large lowercase typography, monochrome photography blocks, margin labels, and editorial pacing across team, concept, stages, timeline, progress, and outcomes.
+
+Visual traits:
+- White canvas with thin black grid/rule structure
+- Soft gradient fields as atmosphere, kept behind content
+- Large lowercase or sentence-case headline blocks
+- Monochrome photo placeholders or image strips when people/work/context matter
+- Small side labels, project metadata, and circled annotations
+
+Use for:
+- Project proposals
+- Creative strategy
+- Team introduction
+- Brand/story decks
+- Concept, stages, timeline, progress, and outcomes
+
+Avoid:
+- Using gradients as the only information carrier
+- Overlapping text on low-contrast gradient areas
+- Decorative photos that do not support team, work, place, or evidence
+
+### Financial Blueprint Analytics
+
+Reference analysis: finance and investment decks built around blue accents, donut/ring charts, tables, forecasting grids, investment target diagrams, funding-use breakdowns, financial-planning sections, and clear KPI tiles.
+
+Visual traits:
+- White/light gray background with cool blue accent
+- Donut charts, circular KPI rings, tables, and forecast matrices
+- Large numeric centerpieces with small explanatory labels
+- Structured finance pages: opportunity, needs, cash flow, use of funds, expected profit
+- Optional dark slide for final profit/investment summary
+
+Use for:
+- Investment opportunity
+- Fundraising needs
+- Budget planning
+- Cash flow forecast
+- Financial model summary
+- Use-of-funds and unit economics pages
+
+Avoid:
+- Fake precision without source labels
+- Decorative circular charts without numbers or categories
+- Finance slides that omit units, periods, assumptions, or calculation notes
+
+### Monochrome Pitch System
+
+Reference analysis: black-and-white startup pitch systems with bold uppercase headings, circular service/product icons, photo blocks, timeline axes, traction line charts, business-model loops, team/CEO pages, and compact section layouts.
+
+Visual traits:
+- Strong black/white contrast with grayscale photos
+- Bold uppercase headings and compact explanatory text
+- Circular numbered icons for services, product modules, and milestones
+- Timeline, traction, mission/vision, business model, team, and service pages
+- Minimal accent color; hierarchy comes from weight, scale, and spacing
+
+Use for:
+- Startup pitch decks
+- Product/service overviews
+- Business model slides
+- Team, mission, vision, traction, timeline, and CEO pages
+
+Avoid:
+- Decorative icons that do not label a product, service, metric, role, or milestone
+- Generic stock photos unless they represent the team, user, product, or operating context
+- Low-density pages that only say a heading without evidence
+
 ### Strategic Report Neo-Corporate
 
 Inspired by recent public strategy-report visual language, abstracted into an original template.

@@ -19,18 +19,22 @@ It reads notes, URLs, research summaries, PDFs, meeting notes, tables, and exist
 
 ## Design Templates
 
-SmartDecks includes eight numbered visual directions.
+SmartDecks includes twelve numbered visual directions.
 
 | No. | Template | Best For |
 | --- | --- | --- |
 | 1 | Executive Analytical Minimalism | White-space, chart-first executive analysis |
 | 2 | Executive Analytical Minimalism Dark | High-contrast analytical readouts |
-| 3 | Strategic Report Neo-Corporate | Formal strategy and policy reports |
-| 4 | Vector Consulting Linework | Line art, icons, diagrams, neon pistachio accents |
-| 5 | Soft Modular Neo-Brutalism | Clear modular explainers with playful structure |
-| 6 | Pastel Neo-Brutalism | Editorial blocks with softer colors |
-| 7 | Analog Editorial Collage | Qualitative research, notes, workshops, narrative synthesis |
-| 8 | Botanical Editorial Classicism | Elegant reflective narratives and soft strategy |
+| 3 | Corporate Linework Profile | Company profile, recruiting, history, culture, and office/location decks |
+| 4 | Gradient Editorial Proposal | Project proposals, creative strategy, team, stages, timeline, and outcomes |
+| 5 | Financial Blueprint Analytics | Investment, financing needs, forecasts, use of funds, and financial planning |
+| 6 | Monochrome Pitch System | Startup pitch, product/service, traction, business model, team, and timeline |
+| 7 | Strategic Report Neo-Corporate | Formal strategy and policy reports |
+| 8 | Vector Consulting Linework | Line art, icons, diagrams, neon pistachio accents |
+| 9 | Soft Modular Neo-Brutalism | Clear modular explainers with playful structure |
+| 10 | Pastel Neo-Brutalism | Editorial blocks with softer colors |
+| 11 | Analog Editorial Collage | Qualitative research, notes, workshops, narrative synthesis |
+| 12 | Botanical Editorial Classicism | Elegant reflective narratives and soft strategy |
 
 Open the visual gallery:
 
@@ -44,13 +48,21 @@ Open the visual gallery:
 
 | 3 | 4 |
 | --- | --- |
-| ![Strategic Report Neo-Corporate](samples/strategic-report-neo-corporate.png) | ![Vector Consulting Linework](samples/vector-consulting-linework.png) |
+| ![Corporate Linework Profile](samples/corporate-linework-profile.png) | ![Gradient Editorial Proposal](samples/gradient-editorial-proposal.png) |
 
 | 5 | 6 |
 | --- | --- |
-| ![Soft Modular Neo-Brutalism](samples/soft-modular-neo-brutalism.png) | ![Pastel Neo-Brutalism](samples/pastel-neo-brutalism.png) |
+| ![Financial Blueprint Analytics](samples/financial-blueprint-analytics.png) | ![Monochrome Pitch System](samples/monochrome-pitch-system.png) |
 
 | 7 | 8 |
+| --- | --- |
+| ![Strategic Report Neo-Corporate](samples/strategic-report-neo-corporate.png) | ![Vector Consulting Linework](samples/vector-consulting-linework.png) |
+
+| 9 | 10 |
+| --- | --- |
+| ![Soft Modular Neo-Brutalism](samples/soft-modular-neo-brutalism.png) | ![Pastel Neo-Brutalism](samples/pastel-neo-brutalism.png) |
+
+| 11 | 12 |
 | --- | --- |
 | ![Analog Editorial Collage](samples/analog-editorial-collage.png) | ![Botanical Editorial Classicism](samples/botanical-editorial-classicism.png) |
 
