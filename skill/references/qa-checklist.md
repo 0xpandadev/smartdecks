@@ -14,6 +14,9 @@ Run before final delivery.
 
 - One slide, one message
 - Action title states a conclusion
+- Slide has a non-obvious insight, not just a restated input sentence
+- The five-second takeaway is clear from the visual structure
+- The so-what or decision implication is explicit
 - Main exhibit supports the title
 - No dense paragraph walls
 - Appendix used for details
@@ -33,6 +36,9 @@ Run before final delivery.
 - Page numbers and footers consistent
 - No accidental template mixing
 - Deck does not overuse generic cards/boxes
+- No box-only slide unless the slide is an executive summary or appendix
+- Diagrams use directionality: arrows, hierarchy, axes, sequence, containment, or swimlanes
+- Semantic icons replace or compress words and are not merely adjacent decoration
 - Charts, diagrams, icons, logos, and tables are used where they clarify the message
 - No decorative-only visuals: remove flowers, leaves, vines, ornaments, abstract corner art, filler icons, or illustrations that do not explain content or structure
 

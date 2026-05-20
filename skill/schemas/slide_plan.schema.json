@@ -17,13 +17,28 @@
       "minItems": 1,
       "items": {
         "type": "object",
-        "required": ["slide_number", "type", "action_title", "message", "exhibit_type"],
+        "required": ["slide_number", "type", "action_title", "message", "exhibit_type", "insight", "information_pattern", "five_second_takeaway", "so_what"],
         "properties": {
           "slide_number": { "type": "integer", "minimum": 1 },
           "type": { "type": "string" },
           "action_title": { "type": "string" },
           "message": { "type": "string" },
           "exhibit_type": { "type": "string" },
+          "insight": { "type": "string" },
+          "information_pattern": {
+            "type": "string",
+            "enum": ["claim_evidence_implication", "comparison", "workflow", "cause_effect", "decision", "risk", "portfolio", "before_after", "system", "timeline", "summary"]
+          },
+          "diagram_pattern": {
+            "type": ["string", "null"],
+            "enum": ["issue_tree", "value_chain", "operating_model", "swimlane", "scorecard", "matrix", "causal_loop", "before_after_architecture", "maturity_curve", "decision_tree", "bubble_map", "claim_evidence_implication", null]
+          },
+          "five_second_takeaway": { "type": "string" },
+          "so_what": { "type": "string" },
+          "semantic_icons": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
           "content_blocks": {
             "type": "array",
             "items": { "type": "string" }

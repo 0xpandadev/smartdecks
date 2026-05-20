@@ -19,8 +19,14 @@ if (!Array.isArray(plan.slides) || plan.slides.length === 0) {
 } else {
   plan.slides.forEach((slide, idx) => {
     const n = slide.slide_number || idx + 1;
-    for (const key of ["type", "action_title", "message", "exhibit_type"]) {
+    for (const key of ["type", "action_title", "message", "exhibit_type", "insight", "information_pattern", "five_second_takeaway", "so_what"]) {
       if (!slide[key]) errors.push(`Slide ${n}: missing ${key}`);
+    }
+    if (slide.visual_role === "text_summary" && !["executive_summary", "title", "section", "appendix", "closing"].includes(String(slide.type))) {
+      errors.push(`Slide ${n}: text_summary is only allowed for summary, title, section, appendix, or closing slides`);
+    }
+    if (Array.isArray(slide.semantic_icons) && slide.semantic_icons.length && !slide.visual_direction) {
+      errors.push(`Slide ${n}: semantic_icons require visual_direction explaining how they encode meaning`);
     }
     if (slide.action_title && slide.action_title.length < 12) {
       errors.push(`Slide ${n}: action_title looks too short`);

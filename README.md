@@ -9,8 +9,10 @@ It reads notes, URLs, research summaries, PDFs, meeting notes, tables, and exist
 ## What It Does
 
 - Converts messy source material into executive-ready deck structure
+- Interprets material into claims, tensions, causal logic, implications, and decisions instead of only summarizing it
 - Uses action titles and one-message-per-slide logic
 - Selects charts, tables, matrices, timelines, process flows, icon maps, and explanatory consulting diagrams
+- Uses semantic icons only when they replace or compress words, such as data, risk, governance, workflow, decision, or human judgment
 - Applies numbered visual templates so you can ask for “template 4” without memorizing names
 - Supports HTML slide output and PPTX-oriented planning/rendering rules
 - Checks overflow, overlap, contrast, missing sources, weak titles, and excessive text

@@ -15,6 +15,7 @@ SmartDecks can produce:
 - PPTX decks
 - HTML slide decks
 - Data charts, consulting diagrams, icon systems, and comparison exhibits
+- Insight synthesis, issue framing, and slide-level visual briefs
 - PDF or screenshot previews when useful
 - Visual QA findings and fixes
 
@@ -31,8 +32,10 @@ For high-stakes, ambiguous, or long decks, show a compact storyline or slide pla
 
 - One slide, one message.
 - Use action titles, not topic labels.
+- Do not merely summarize the input. Interpret it: extract the core claim, hidden tension, causal logic, decision implication, and what the audience should do or understand next.
 - Prefer charts, diagrams, tables, icons, logos, and structured exhibits over generic cards.
 - Never add decorative illustrations, flowers, leaves, ornaments, abstract line art, or filler icons just to make a slide look designed. Every visual asset must explain content, label structure, identify an entity, show flow, or encode data.
+- Use semantic icons only when they can replace or compress words: roles, risks, data, workflow steps, decision points, entities, or capabilities.
 - Do not default to boxes/cards for every slide. Each slide must choose a visual role: chart, data table, process, matrix, system map, timeline, icon grid, hero message, or appendix.
 - Include source footers on data or externally sourced slides.
 - Keep a consistent visual system across the deck.
@@ -44,16 +47,21 @@ For high-stakes, ambiguous, or long decks, show a compact storyline or slide pla
 ## Workflow
 
 1. Understand the brief: objective, audience, use case, output format, tone, constraints, sources, and slide count.
-2. Create the storyline: sections, argument flow, and key decisions.
-3. Create a slide plan: action title, message, exhibit type, content blocks, sources, and visual direction for each slide.
-4. Select a rendering path: PPTX, HTML, both, or schema-only.
-5. Choose a template from the curated pack or from a user-provided template.
-6. Render the deck.
-7. Inspect the rendered output and fix overflow, overlap, weak hierarchy, missing sources, and inconsistent styling.
+2. Synthesize the material: claims, evidence, tensions, causal links, counterpoints, decisions, and implications.
+3. Create the storyline: sections, argument flow, key decisions, and audience action.
+4. Create a slide visual brief: insight, information pattern, diagram pattern, semantic icons, five-second takeaway, and so-what.
+5. Create a slide plan: action title, message, exhibit type, content blocks, sources, and visual direction for each slide.
+6. Select a rendering path: PPTX, HTML, both, or schema-only.
+7. Choose a template from the curated pack or from a user-provided template.
+8. Render the deck.
+9. Inspect the rendered output and fix overflow, overlap, weak hierarchy, missing sources, and inconsistent styling.
 
 ## When To Read References
 
 - Overall process: `references/workflow.md`
+- Deep synthesis and information compression: `references/information-synthesis.md`
+- Consulting diagram grammar: `references/consulting-diagram-grammar.md`
+- Semantic icon system: `references/semantic-icons.md`
 - Story structures: `references/storyline-patterns.md`
 - Slide archetypes: `references/slide-patterns.md`
 - Exhibit selection: `references/exhibit-selector.md`
