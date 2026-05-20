@@ -19,22 +19,22 @@ It reads notes, URLs, research summaries, PDFs, meeting notes, tables, and exist
 
 ## Design Templates
 
-SmartDecks includes twelve numbered visual directions.
+SmartDecks includes twelve numbered visual directions. These are reusable visual and information-architecture systems, not fixed deck categories. Each one can support consulting analysis, proposals, business introductions, product stories, investor narratives, data readouts, problem diagnosis, solution recommendations, and executive decision materials.
 
-| No. | Template | Best For |
+| No. | Template | Information Pattern |
 | --- | --- | --- |
-| 1 | Executive Analytical Minimalism | White-space, chart-first executive analysis |
-| 2 | Executive Analytical Minimalism Dark | High-contrast analytical readouts |
-| 3 | Corporate Linework Profile | Company profile, recruiting, history, culture, and office/location decks |
-| 4 | Gradient Editorial Proposal | Project proposals, creative strategy, team, stages, timeline, and outcomes |
-| 5 | Financial Blueprint Analytics | Investment, financing needs, forecasts, use of funds, and financial planning |
-| 6 | Monochrome Pitch System | Startup pitch, product/service, traction, business model, team, and timeline |
-| 7 | Strategic Report Neo-Corporate | Formal strategy and policy reports |
-| 8 | Vector Consulting Linework | Line art, icons, diagrams, neon pistachio accents |
-| 9 | Soft Modular Neo-Brutalism | Clear modular explainers with playful structure |
-| 10 | Pastel Neo-Brutalism | Editorial blocks with softer colors |
-| 11 | Analog Editorial Collage | Qualitative research, notes, workshops, narrative synthesis |
-| 12 | Botanical Editorial Classicism | Elegant reflective narratives and soft strategy |
+| 1 | Executive Analytical Minimalism | Charts, comparisons, evidence, and recommendations |
+| 2 | Executive Analytical Minimalism Dark | Strong conclusions, section transitions, and signal moments |
+| 3 | Precision Linework System | Entity maps, milestones, operating facts, roles, locations, and structure |
+| 4 | Gradient Grid Editorial | Narrative arcs, concepts, stages, teams, transformation stories, and outcomes |
+| 5 | Quantitative Blueprint System | Metrics, forecasts, assumptions, scenarios, economics, and resource logic |
+| 6 | Monochrome Signal System | Crisp arguments, business models, modules, traction, and decision paths |
+| 7 | Strategic Report Neo-Corporate | Multi-option evidence, policy logic, implications, and dense executive structure |
+| 8 | Vector Consulting Linework | Workflows, operating models, causal loops, and value chains |
+| 9 | Soft Modular Neo-Brutalism | Modular systems, capability maps, and workflow loops |
+| 10 | Pastel Neo-Brutalism | Bold comparisons, options, business models, and launches |
+| 11 | Analog Editorial Collage | Qualitative synthesis, field notes, and narrative evidence |
+| 12 | Botanical Editorial Classicism | Ecosystems, long-horizon arguments, and reflective strategy |
 
 Open the visual gallery:
 
@@ -48,11 +48,11 @@ Open the visual gallery:
 
 | 3 | 4 |
 | --- | --- |
-| ![Corporate Linework Profile](samples/corporate-linework-profile.png) | ![Gradient Editorial Proposal](samples/gradient-editorial-proposal.png) |
+| ![Precision Linework System](samples/corporate-linework-profile.png) | ![Gradient Grid Editorial](samples/gradient-editorial-proposal.png) |
 
 | 5 | 6 |
 | --- | --- |
-| ![Financial Blueprint Analytics](samples/financial-blueprint-analytics.png) | ![Monochrome Pitch System](samples/monochrome-pitch-system.png) |
+| ![Quantitative Blueprint System](samples/financial-blueprint-analytics.png) | ![Monochrome Signal System](samples/monochrome-pitch-system.png) |
 
 | 7 | 8 |
 | --- | --- |

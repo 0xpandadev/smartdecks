@@ -6,6 +6,8 @@ Use a small set of strong templates instead of a large template library.
 
 Use professional design-language names in user-facing output. Do not expose source-template names unless the user explicitly asks.
 
+Template names describe visual grammar and information architecture. They are not deck-type labels. Do not decide in advance that one template belongs to only one document type or business scene. Any template may be used for consulting analysis, business introduction, problem diagnosis, solution recommendation, investor narrative, data readout, product story, or executive decision material when the content structure fits.
+
 Keep old names only as internal aliases:
 - `Pin & Paper` -> `Analog Editorial Collage`
 - `BlockFrame` -> `Pastel Neo-Brutalism`
@@ -126,32 +128,32 @@ Use for:
 - Big message
 - Final recommendation
 
-### Corporate Linework Profile
+### Precision Linework System
 
-Reference analysis: monochrome company-introduction decks with bold logo/title pages, sparse copy, red accent marks, simple isometric city/office linework, timeline/company-history pages, agenda pages, employee charts, and compact company-data tables.
+Reference analysis: monochrome decks with bold title pages, sparse copy, red accent marks, precise isometric/line diagrams, timeline pages, agenda pages, compact data tables, simple charts, and structured entity maps. Treat the reference as a disciplined linework language, not as a single-purpose template.
 
 Visual traits:
 - White or pale gray textured background
 - Heavy black typography for section markers and agenda numbers
 - Thin black rules, table grids, and timeline arrows
 - One small red accent per slide for emphasis, never as decoration
-- Isometric line icons only when they represent office, people, product, location, timeline, or business domain
+- Line icons only when they represent an actual entity, actor, asset, process, location, milestone, metric, or business domain
 
-Use for:
-- Company profile
-- Recruiting/culture decks
-- Office/location/history decks
-- Corporate onboarding
-- Founder or business overview
+Information patterns it handles well:
+- Entity maps and business structure
+- Milestones, history, and sequencing
+- Operating facts, roles, locations, and assets
+- Before/after comparisons with concrete objects
+- Simple charts or tables that need disciplined hierarchy
 
 Avoid:
 - Colorful decorative illustrations
-- Generic city drawings unrelated to company footprint or operations
+- Generic city drawings unrelated to the argument
 - Dense prose; this style needs short copy and clear sections
 
-### Gradient Editorial Proposal
+### Gradient Grid Editorial
 
-Reference analysis: modern proposal systems with strict rule grids, asymmetrical layouts, soft blurred gradients, large lowercase typography, monochrome photography blocks, margin labels, and editorial pacing across team, concept, stages, timeline, progress, and outcomes.
+Reference analysis: modern editorial systems with strict rule grids, asymmetrical layouts, soft blurred gradients, large lowercase typography, monochrome photography blocks, margin labels, and pacing across concepts, people, stages, timelines, progress, and outcomes. Treat the reference as a narrative-grid language, not as a single-purpose template.
 
 Visual traits:
 - White canvas with thin black grid/rule structure
@@ -160,61 +162,61 @@ Visual traits:
 - Monochrome photo placeholders or image strips when people/work/context matter
 - Small side labels, project metadata, and circled annotations
 
-Use for:
-- Project proposals
-- Creative strategy
-- Team introduction
-- Brand/story decks
-- Concept, stages, timeline, progress, and outcomes
+Information patterns it handles well:
+- Narrative arcs and transformation stories
+- Concept definition, stage gates, and journey pages
+- Teams, stakeholders, operating rituals, and work evidence
+- Qualitative synthesis with visual pacing
+- Strategy stories that need atmosphere without losing structure
 
 Avoid:
 - Using gradients as the only information carrier
 - Overlapping text on low-contrast gradient areas
 - Decorative photos that do not support team, work, place, or evidence
 
-### Financial Blueprint Analytics
+### Quantitative Blueprint System
 
-Reference analysis: finance and investment decks built around blue accents, donut/ring charts, tables, forecasting grids, investment target diagrams, funding-use breakdowns, financial-planning sections, and clear KPI tiles.
+Reference analysis: quantitative decks built around cool blue accents, donut/ring charts, tables, forecasting grids, target diagrams, resource breakdowns, planning sections, KPI tiles, and scenario comparisons. Treat the reference as a numeric blueprint language, not as a single-purpose template.
 
 Visual traits:
 - White/light gray background with cool blue accent
 - Donut charts, circular KPI rings, tables, and forecast matrices
 - Large numeric centerpieces with small explanatory labels
-- Structured finance pages: opportunity, needs, cash flow, use of funds, expected profit
+- Structured quantitative pages: opportunity, needs, resources, assumptions, forecast, scenario, impact
 - Optional dark slide for final profit/investment summary
 
-Use for:
-- Investment opportunity
-- Fundraising needs
-- Budget planning
-- Cash flow forecast
-- Financial model summary
-- Use-of-funds and unit economics pages
+Information patterns it handles well:
+- Metrics, benchmarks, and KPI readouts
+- Forecasts, scenarios, assumptions, and sensitivities
+- Resource allocation, economics, and planning logic
+- Quantitative comparisons and model summaries
+- Business cases, investment logic, and impact sizing
 
 Avoid:
 - Fake precision without source labels
 - Decorative circular charts without numbers or categories
-- Finance slides that omit units, periods, assumptions, or calculation notes
+- Quantitative slides that omit units, periods, assumptions, or calculation notes
 
-### Monochrome Pitch System
+### Monochrome Signal System
 
-Reference analysis: black-and-white startup pitch systems with bold uppercase headings, circular service/product icons, photo blocks, timeline axes, traction line charts, business-model loops, team/CEO pages, and compact section layouts.
+Reference analysis: black-and-white business decks with bold uppercase headings, circular numbered icons, photo blocks, timeline axes, traction/metric line charts, business-model loops, team/role pages, and compact section layouts. Treat the reference as a high-signal monochrome language, not as a single-purpose template.
 
 Visual traits:
 - Strong black/white contrast with grayscale photos
 - Bold uppercase headings and compact explanatory text
-- Circular numbered icons for services, product modules, and milestones
-- Timeline, traction, mission/vision, business model, team, and service pages
+- Circular numbered icons for modules, decisions, roles, metrics, and milestones
+- Timeline, traction, mission/vision, business model, team, service, and decision pages
 - Minimal accent color; hierarchy comes from weight, scale, and spacing
 
-Use for:
-- Startup pitch decks
-- Product/service overviews
-- Business model slides
-- Team, mission, vision, traction, timeline, and CEO pages
+Information patterns it handles well:
+- Crisp argument sequences and board-style claims
+- Business model logic and value creation loops
+- Product, service, capability, or module breakdowns
+- Milestones, traction, roadmap, and decision paths
+- People, roles, governance, mission, and operating principles
 
 Avoid:
-- Decorative icons that do not label a product, service, metric, role, or milestone
+- Decorative icons that do not label a module, metric, role, decision, or milestone
 - Generic stock photos unless they represent the team, user, product, or operating context
 - Low-density pages that only say a heading without evidence
 

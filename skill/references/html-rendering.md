@@ -7,18 +7,20 @@ Use HTML when the user asks for browser slides, web-native decks, visual prototy
 If the user names a template, use it.
 
 If not:
-- Business/executive default: `Executive Analytical Minimalism`
-- Strong title/section moments: `Executive Analytical Minimalism Dark`
-- Company profile / recruiting / culture / office history: `Corporate Linework Profile`
-- Project proposal / creative strategy / team narrative: `Gradient Editorial Proposal`
-- Finance / investment / forecast / use-of-funds: `Financial Blueprint Analytics`
-- Startup pitch / product / service / traction: `Monochrome Pitch System`
-- Transformation/policy/AI report: `Strategic Report Neo-Corporate`
-- AI/workflow diagram: `Vector Consulting Linework`
-- Product/storytelling: `Analog Editorial Collage`
-- Structured modern business: `Pastel Neo-Brutalism`
-- Tech/future: `Soft Modular Neo-Brutalism`
-- Calm research/education: `Botanical Editorial Classicism`
+- Charts / comparisons / evidence / recommendations: `Executive Analytical Minimalism`
+- Strong conclusions / section transitions / signal moments: `Executive Analytical Minimalism Dark`
+- Entity maps / milestones / operating facts / structure: `Precision Linework System`
+- Narrative arcs / concepts / stages / transformation stories: `Gradient Grid Editorial`
+- Metrics / forecasts / assumptions / scenarios / economics: `Quantitative Blueprint System`
+- Crisp argument / business model / modules / decision paths: `Monochrome Signal System`
+- Multi-option evidence / policy logic / implications: `Strategic Report Neo-Corporate`
+- Workflows / operating models / causal loops / value chains: `Vector Consulting Linework`
+- Qualitative synthesis / field notes / narrative evidence: `Analog Editorial Collage`
+- Bold comparisons / options / business models / launches: `Pastel Neo-Brutalism`
+- Modular systems / capability maps / workflow loops: `Soft Modular Neo-Brutalism`
+- Ecosystems / long-horizon arguments / reflective strategy: `Botanical Editorial Classicism`
+
+These are not fixed use cases. Choose by the dominant information pattern and visual grammar, not by whether the deck is a proposal, pitch, company overview, or consulting analysis.
 
 ## Beautiful HTML Templates
 

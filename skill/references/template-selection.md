@@ -2,6 +2,8 @@
 
 Users should not need to memorize template names. Convert natural language into a design system.
 
+Important: template numbers are visual and information-architecture systems, not fixed deck categories. Do not bind a template to a single document type or business scene. Any template can be used for strategy, consulting analysis, business introduction, problem diagnosis, solution recommendation, investor narrative, product story, research report, or executive decision material if its visual grammar fits the content.
+
 ## Trigger Phrases
 
 Use this flow when the user says:
@@ -17,22 +19,22 @@ Use this flow when the user says:
 
 Give a short list:
 
-| No. | Design system | Use when | Visual language |
+| No. | Design system | Information fit | Visual language |
 | --- | --- | --- | --- |
-| 1 | Executive Analytical Minimalism | Executive analysis, charts, strategy | white space, thin rules, restrained accents |
-| 2 | Executive Analytical Minimalism Dark | Covers, section breaks, big conclusions | deep navy, high contrast, signal slides |
-| 3 | Corporate Linework Profile | Company profile, recruiting, culture, office/history decks | monochrome, red accent, isometric linework |
-| 4 | Gradient Editorial Proposal | Project proposals, creative strategy, team/story decks | thin grid, soft gradients, bold lowercase type |
-| 5 | Financial Blueprint Analytics | Finance, investment, forecasts, fundraising plans | blue accent, donut charts, tables, dashboards |
-| 6 | Monochrome Pitch System | Startup pitch, product/service/business model decks | black/white, bold icons, compact pitch layouts |
-| 7 | Strategic Report Neo-Corporate | Transformation, policy, AI strategy | green accent, dense executive structure |
-| 8 | Vector Consulting Linework | Workflows, operating models, AI diagrams | thin line icons, arrows, pistachio accent |
-| 9 | Soft Modular Neo-Brutalism | AI/product/web-native explainers | rounded modules, pastel pop, bold borders |
-| 10 | Pastel Neo-Brutalism | Startup/product/business pitch | chunky borders, energetic blocks |
-| 11 | Analog Editorial Collage | Essays, qualitative research, workshops | paper, annotations, editorial tactility |
-| 12 | Botanical Editorial Classicism | Calm research, education, culture | forest/cream, editorial classicism |
+| 1 | Executive Analytical Minimalism | Charts, comparisons, evidence, recommendations | white space, thin rules, restrained accents |
+| 2 | Executive Analytical Minimalism Dark | Strong conclusions, section transitions, signal moments | deep navy, high contrast, signal slides |
+| 3 | Precision Linework System | Entity maps, milestones, operating facts, structure, location, roles | monochrome, red accent, precise linework |
+| 4 | Gradient Grid Editorial | Narrative arcs, concepts, teams, stages, transformation stories | thin grid, soft gradients, bold editorial type |
+| 5 | Quantitative Blueprint System | Metrics, forecasts, assumptions, scenarios, resources, economics | blue accent, rings, tables, dashboards |
+| 6 | Monochrome Signal System | Crisp arguments, business models, modules, traction, decision paths | black/white, bold icons, compact signal layouts |
+| 7 | Strategic Report Neo-Corporate | Multi-option evidence, policy logic, implications | green accent, dense executive structure |
+| 8 | Vector Consulting Linework | Workflows, operating models, causal loops, value chains | thin line icons, arrows, pistachio accent |
+| 9 | Soft Modular Neo-Brutalism | Modular systems, capability maps, workflow loops | rounded modules, pastel pop, bold borders |
+| 10 | Pastel Neo-Brutalism | Bold comparisons, options, business models, launches | chunky borders, energetic blocks |
+| 11 | Analog Editorial Collage | Qualitative synthesis, field notes, narrative evidence | paper, annotations, editorial tactility |
+| 12 | Botanical Editorial Classicism | Ecosystems, long-horizon arguments, reflective strategy | forest/cream, editorial classicism |
 
-Then ask the user to choose one, or offer to choose based on the material.
+Then ask the user to choose one, or offer to choose based on the material. When recommending a template, explain the fit by information structure, not by deck type.
 
 ## Numbered Selection
 
