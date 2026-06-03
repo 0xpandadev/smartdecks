@@ -51,6 +51,22 @@ When building from an article:
 - Decide whether each should become a logo tile, source footer, or plain text reference.
 - Use abstract icons for generic roles such as legal, accounting, marketing, PM, governance, and risk.
 
+## Generated Visual Assets
+
+Generated visuals are allowed when they explain content. Read `generated-visuals.md` when creating:
+
+- documentary photos
+- infographics
+- process or pipeline diagrams
+- UI situation images
+- screenshot redesigns
+- data poster images
+- evidence grids
+
+Always choose the target slide slot and aspect ratio before generating. Do not generate a pretty image and then force the slide around it.
+
+For decks with generated visuals, maps, dense UI scenes, evidence walls, or repeated component systems, also read `execution-quality-system.md`. Its rules apply across all templates, not only strict-grid decks.
+
 ## Consulting Visual Vocabulary
 
 Use:

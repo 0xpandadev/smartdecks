@@ -128,6 +128,32 @@ Use for:
 - Big message
 - Final recommendation
 
+### Evidence Grid Precision
+
+Original SmartDecks strict-grid system for analytical HTML slides. Treat it as an evidence-first layout language, not as a copy of any third-party template or implementation.
+
+Visual traits:
+- Warm white canvas, near-black typography, one high-saturation anchor color
+- 12/16 column grid, strong left alignment, hairline rules, hard rectangles
+- Very large light-weight titles, heavier small labels, mono metadata
+- No gradients, shadows, rounded corners, copied layouts, or decorative illustrations
+- Images are bound to semantic slots: evidence, UI scene, system map, data poster, or documentary context
+
+Information patterns it handles well:
+- Product/methodology explanations
+- Analytical claims and facts
+- KPI towers, timelines, loop diagrams, matrices, system maps, evidence walls
+- UI/workflow scenes and generated infographics
+- Technology, AI, data, strategy, and operating-model decks
+
+Avoid:
+- Long prose slides
+- Decorative art or stock-like imagery
+- Multiple accent colors
+- Fake precision, fake logos, or image assets with their own slide chrome
+
+When using this design system, read `references/evidence-grid-precision.md` and `references/execution-quality-system.md`.
+
 ### Precision Linework System
 
 Reference analysis: monochrome decks with bold title pages, sparse copy, red accent marks, precise isometric/line diagrams, timeline pages, agenda pages, compact data tables, simple charts, and structured entity maps. Treat the reference as a disciplined linework language, not as a single-purpose template.

@@ -41,6 +41,9 @@ Run before final delivery.
 - Semantic icons replace or compress words and are not merely adjacent decoration
 - Charts, diagrams, icons, logos, and tables are used where they clarify the message
 - No decorative-only visuals: remove flowers, leaves, vines, ornaments, abstract corner art, filler icons, or illustrations that do not explain content or structure
+- If generated visuals are used, each has a slot, aspect ratio, semantic role, and no slide chrome
+- If maps are used, the map explains spatial relationships and has readable labels or a static fallback
+- If repeated components are used, each component has a meaning and the deck does not become box-only
 
 ## Data and Source QA
 

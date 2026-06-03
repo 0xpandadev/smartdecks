@@ -9,6 +9,7 @@ If the user names a template, use it.
 If not:
 - Charts / comparisons / evidence / recommendations: `Executive Analytical Minimalism`
 - Strong conclusions / section transitions / signal moments: `Executive Analytical Minimalism Dark`
+- Product logic / methodology / UI scenes / strict analytical style: `Evidence Grid Precision`
 - Entity maps / milestones / operating facts / structure: `Precision Linework System`
 - Narrative arcs / concepts / stages / transformation stories: `Gradient Grid Editorial`
 - Metrics / forecasts / assumptions / scenarios / economics: `Quantitative Blueprint System`
@@ -21,6 +22,8 @@ If not:
 - Ecosystems / long-horizon arguments / reflective strategy: `Botanical Editorial Classicism`
 
 These are not fixed use cases. Choose by the dominant information pattern and visual grammar, not by whether the deck is a proposal, pitch, company overview, or consulting analysis.
+
+For `Evidence Grid Precision`, read `references/evidence-grid-precision.md`. For every template, read `references/execution-quality-system.md` when the deck uses generated visuals, maps, complex components, or high-density analytical layouts. Use layout roles, one anchor color where the template calls for it, image slots, and strict QA instead of free-form styling.
 
 ## Beautiful HTML Templates
 
@@ -40,6 +43,7 @@ When using `zarazhangrui/beautiful-html-templates`:
 - Use SVG/HTML/CSS diagrams for crisp line art when practical.
 - Use CSS/SVG charts, icon rows, logo tiles, matrices, and process diagrams; do not rely only on cards.
 - Do not add decorative SVGs or images. Every CSS/SVG illustration must be a labeled chart, diagram, icon map, logo map, process, or content-relevant visual explanation.
+- When generated photos, infographics, UI scenes, or screenshot visuals would improve the deck, read `references/generated-visuals.md` and bind each image to a slide slot and aspect ratio before generating.
 - Use browser screenshots for QA.
 - Ensure every slide fits in a 16:9 frame without vertical scroll or clipped text.
 

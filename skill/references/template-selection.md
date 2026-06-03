@@ -7,6 +7,7 @@ Important: template numbers are visual and information-architecture systems, not
 ## Trigger Phrases
 
 Use this flow when the user says:
+
 - template list
 - design candidates
 - show styles
@@ -23,16 +24,17 @@ Give a short list:
 | --- | --- | --- | --- |
 | 1 | Executive Analytical Minimalism | Charts, comparisons, evidence, recommendations | white space, thin rules, restrained accents |
 | 2 | Executive Analytical Minimalism Dark | Strong conclusions, section transitions, signal moments | deep navy, high contrast, signal slides |
-| 3 | Precision Linework System | Entity maps, milestones, operating facts, structure, location, roles | monochrome, red accent, precise linework |
-| 4 | Gradient Grid Editorial | Narrative arcs, concepts, teams, stages, transformation stories | thin grid, soft gradients, bold editorial type |
-| 5 | Quantitative Blueprint System | Metrics, forecasts, assumptions, scenarios, resources, economics | blue accent, rings, tables, dashboards |
-| 6 | Monochrome Signal System | Crisp arguments, business models, modules, traction, decision paths | black/white, bold icons, compact signal layouts |
-| 7 | Strategic Report Neo-Corporate | Multi-option evidence, policy logic, implications | green accent, dense executive structure |
-| 8 | Vector Consulting Linework | Workflows, operating models, causal loops, value chains | thin line icons, arrows, pistachio accent |
-| 9 | Soft Modular Neo-Brutalism | Modular systems, capability maps, workflow loops | rounded modules, pastel pop, bold borders |
-| 10 | Pastel Neo-Brutalism | Bold comparisons, options, business models, launches | chunky borders, energetic blocks |
-| 11 | Analog Editorial Collage | Qualitative synthesis, field notes, narrative evidence | paper, annotations, editorial tactility |
-| 12 | Botanical Editorial Classicism | Ecosystems, long-horizon arguments, reflective strategy | forest/cream, editorial classicism |
+| 3 | Evidence Grid Precision | Product logic, facts, methodology, UI scenes, analytical decks | strict evidence grid, one anchor color, hairlines |
+| 4 | Precision Linework System | Entity maps, milestones, operating facts, structure, location, roles | monochrome, red accent, precise linework |
+| 5 | Gradient Grid Editorial | Narrative arcs, concepts, teams, stages, transformation stories | thin grid, soft gradients, bold editorial type |
+| 6 | Quantitative Blueprint System | Metrics, forecasts, assumptions, scenarios, resources, economics | blue accent, rings, tables, dashboards |
+| 7 | Monochrome Signal System | Crisp arguments, business models, modules, traction, decision paths | black/white, bold icons, compact signal layouts |
+| 8 | Strategic Report Neo-Corporate | Multi-option evidence, policy logic, implications | green accent, dense executive structure |
+| 9 | Vector Consulting Linework | Workflows, operating models, causal loops, value chains | thin line icons, arrows, pistachio accent |
+| 10 | Soft Modular Neo-Brutalism | Modular systems, capability maps, workflow loops | rounded modules, pastel pop, bold borders |
+| 11 | Pastel Neo-Brutalism | Bold comparisons, options, business models, launches | chunky borders, energetic blocks |
+| 12 | Analog Editorial Collage | Qualitative synthesis, field notes, narrative evidence | paper, annotations, editorial tactility |
+| 13 | Botanical Editorial Classicism | Ecosystems, long-horizon arguments, reflective strategy | forest/cream, editorial classicism |
 
 Then ask the user to choose one, or offer to choose based on the material. When recommending a template, explain the fit by information structure, not by deck type.
 
@@ -41,9 +43,12 @@ Then ask the user to choose one, or offer to choose based on the material. When 
 Always number template lists. Users may later refer to templates by number only.
 
 If the user says:
+
 - "1番で"
 - "No. 3"
 - "template 5"
+- "テンプレ5で"
+- "模板5"
 - "5で作って"
 
 map the number to the design system above and proceed without asking again unless the request is ambiguous.
@@ -51,12 +56,13 @@ map the number to the design system above and proceed without asking again unles
 When answering template-list requests, include this instruction:
 
 ```text
-次回からは「3番で」「5番で」のように番号だけ指定できます。
+次回からは「3番で」「template 3」「模板3」のように番号だけで指定できます。
 ```
 
 ## Visual Preview Gallery
 
 When asked for visual samples, create an HTML preview gallery with 2-3 sample slides per design system:
+
 - Title/thesis slide
 - Data/chart or diagram slide
 - Summary/decision slide

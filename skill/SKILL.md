@@ -16,6 +16,7 @@ SmartDecks can produce:
 - HTML slide decks
 - Data charts, consulting diagrams, icon systems, and comparison exhibits
 - Insight synthesis, issue framing, and slide-level visual briefs
+- Generated visual briefs for photos, infographics, flows, and UI scenes
 - PDF or screenshot previews when useful
 - Visual QA findings and fixes
 
@@ -40,7 +41,7 @@ For high-stakes, ambiguous, or long decks, show a compact storyline or slide pla
 - Include source footers on data or externally sourced slides.
 - Keep a consistent visual system across the deck.
 - Use the user's existing template, brand, or prior deck style when provided.
-- Avoid copying logos, exact layouts, proprietary trade dress, or firm-specific branding from consulting firms.
+- Avoid copying logos, exact layouts, source code, proprietary trade dress, or third-party template implementations.
 - Make the output useful first, beautiful second.
 - Always run final slide QA.
 
@@ -50,16 +51,17 @@ For high-stakes, ambiguous, or long decks, show a compact storyline or slide pla
 2. Synthesize the material: claims, evidence, tensions, causal links, counterpoints, decisions, and implications.
 3. Create the storyline: sections, argument flow, key decisions, and audience action.
 4. Create a slide visual brief: insight, information pattern, diagram pattern, semantic icons, five-second takeaway, and so-what.
-5. Create a slide plan: action title, message, exhibit type, content blocks, sources, and visual direction for each slide.
+5. Create a slide plan: action title, message, layout role, exhibit type, content blocks, sources, visual assets, and visual direction for each slide.
 6. Select a rendering path: PPTX, HTML, both, or schema-only.
 7. Choose a template from the curated pack or from a user-provided template.
 8. Render the deck.
-9. Inspect the rendered output and fix overflow, overlap, weak hierarchy, missing sources, and inconsistent styling.
+9. Inspect the rendered output and fix overflow, overlap, weak hierarchy, missing sources, inconsistent styling, decorative visuals, and unsupported image details.
 
 ## When To Read References
 
 - Overall process: `references/workflow.md`
 - Deep synthesis and information compression: `references/information-synthesis.md`
+- Universal execution quality: `references/execution-quality-system.md`
 - Consulting diagram grammar: `references/consulting-diagram-grammar.md`
 - Semantic icon system: `references/semantic-icons.md`
 - Story structures: `references/storyline-patterns.md`
@@ -67,8 +69,10 @@ For high-stakes, ambiguous, or long decks, show a compact storyline or slide pla
 - Exhibit selection: `references/exhibit-selector.md`
 - Chart and data grammar: `references/chart-grammar.md`
 - Icons, logos, and visual assets: `references/visual-assets.md`
+- Generated photos, infographics, UI scenes, and screenshot visuals: `references/generated-visuals.md`
 - Curated visual templates: `references/template-pack.md`
 - Template selection flow and sample previews: `references/template-selection.md`
+- Evidence Grid Precision strict analytical grid system: `references/evidence-grid-precision.md`
 - Consulting-style diagrams and line-art prompts: `references/consulting-diagrams.md`
 - PPTX creation/editing: `references/pptx-rendering.md`
 - HTML slide creation: `references/html-rendering.md`
@@ -96,7 +100,7 @@ Show a concise template list using professional design-language names, with:
 
 If the user asks for visual samples, create a small HTML gallery or preview deck with 2-3 sample slides per design system, then let the user choose.
 
-Always number template lists. Accept later references like "1番", "No. 3", "template 5", or "5で" as template selection.
+Always number template lists. Accept later references like "1番", "No. 3", "template 5", "テンプレ5", "模板5", or "5で" as template selection.
 
 Recommended user flow:
 1. User invokes `$smart-decks`.
@@ -114,4 +118,8 @@ Use `schemas/deck_brief.schema.json` and `schemas/slide_plan.schema.json` when a
 
 For business, strategy, executive, proposal, policy, or research decks, default to `Executive Analytical Minimalism` unless the user provides a better template.
 
+For strict grid, high-contrast analytical HTML, product/methodology, UI-scene, evidence-heavy, or data-driven visual requests, use `Evidence Grid Precision` and read `references/evidence-grid-precision.md`.
+
 For diagrams using the user's preferred style, default to `Vector Consulting Linework`: white background, clean thin black outlines, limited palette, neon pistachio green accent, professional vector look, friendly high-end tech corporate tone.
+
+When the user asks for photos, infographics, flow diagrams, UI situation images, GPT-Image, GPT-M, or image generation inside slides, read `references/generated-visuals.md`. Generated visuals must be meaningful slide assets, not decorative filler or full-slide substitutes.
