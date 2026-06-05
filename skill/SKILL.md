@@ -110,6 +110,30 @@ Recommended user flow:
 5. User chooses a design system or says "choose for me".
 6. SmartDecks renders the final PPTX/HTML and runs QA.
 
+## Hard Template Enforcement
+
+When the user selects a numbered template, treat the number as binding.
+
+Before rendering:
+- Resolve the number using `references/template-selection.md`.
+- Read the selected template reference.
+- Read `references/execution-quality-system.md`.
+- For HTML decks, read `references/html-rendering.md`.
+- Do not silently fall back to another template because it is easier to render.
+
+If the user selects `template 3`, `3番`, `テンプレ3`, `模板3`, or similar, the deck must use `Evidence Grid Precision`.
+
+For `Evidence Grid Precision`, these are hard violations:
+- pastel multi-color palette
+- thick black drop shadows
+- rounded card decks
+- pill-heavy layouts
+- decorative image blocks
+- repeated generic card grids
+- template styles from Soft Modular Neo-Brutalism, Pastel Neo-Brutalism, Capsule, or BlockFrame
+
+For `Evidence Grid Precision` HTML outputs, run `scripts/validate_html_template.js` after rendering when Node.js is available. If validation fails, fix the HTML before returning it.
+
 ## Intermediate Schemas
 
 Use `schemas/deck_brief.schema.json` and `schemas/slide_plan.schema.json` when a stable plan is useful, when multiple renderers are involved, or when the user asks for reusable structure.

@@ -168,3 +168,28 @@ Before finalizing:
 - Are there no copied third-party layouts or code?
 - Are generated images free of slide chrome, logos, page numbers, fake UI clutter, and unsupported claims?
 - Does the deck use charts, diagrams, icons, and images where they clarify the message, rather than generic boxes?
+
+## HTML Enforcement
+
+When rendering Evidence Grid Precision as HTML, the output should look structurally different from soft modular, capsule, or neo-brutalist decks.
+
+Required signals:
+
+- page or slide root identifies the template, for example `data-template="evidence-grid-precision"` or a clear internal comment
+- hard rectangular modules
+- hairline rules
+- one accent color only
+- visible grid alignment
+- at least four layout roles in decks longer than six slides
+- evidence cells, data rows, system nodes, charts, or diagrams instead of repeated cards
+
+Forbidden signals:
+
+- `box-shadow` used for chunky card shadows
+- `border-radius` above 2px on major modules
+- classes or visual concepts named `pill`, `capsule`, `bubble`, `soft`, or `brutal`
+- pastel multi-color semantic palette unless the colors encode actual data categories
+- repeated `.card` grids as the primary layout
+- decorative hero photos without an evidence caption or analytical role
+
+If these forbidden signals appear, the deck is not using Evidence Grid Precision and must be rewritten before delivery.
